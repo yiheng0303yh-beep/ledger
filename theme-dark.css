@@ -1,0 +1,40 @@
+/* 风格 C：终端。小怪住在一个 claude 终端窗口里，气泡是命令行输出 */
+:root{
+  --font:"Cascadia Mono","SF Mono","Menlo","Consolas","Microsoft YaHei UI","Microsoft YaHei",monospace;
+  --font-num:"Cascadia Mono","SF Mono","Menlo","Consolas",monospace;
+  --bg:#171513;--surface:#201d1a;--field:#171513;--fg:#ece6dd;--muted:#948b80;--line:#37322d;--track:#2c2824;
+  --accent:#d97757;--accent-fg:#1a0e09;
+  --hero-bg:#201d1a;--hero-fg:#ece6dd;
+  --income:#7fd68f;--expense:#ff7e6e;--warn:#f0b54f;--warn-bg:#2d2310;
+  --c0:#d97757;--c1:#7fd68f;--c2:#6fb3ff;--c3:#c792ea;--c4:#f0b54f;--c5:#5ed1c8;--c6:#ff7e9f;--c7:#948b80;
+  --radius:6px;--radius-sm:4px;
+  --shadow:none;--shadow-sm:none;--shadow-fab:0 0 0 1px #8a4a36,0 8px 24px rgba(217,119,87,.25);
+  --clawd:#d97757;--clawd-eye:#171513;--clawd-spark:#f0b54f;
+  color-scheme:dark;
+}
+body{font-size:14px}
+.mascot-box{flex-direction:row;align-items:center;gap:12px;border:1px solid var(--accent);border-radius:var(--radius);background:var(--surface);padding:30px 12px 12px;position:relative}
+.mascot-box::before{content:"● ● ●    claude-ledger";position:absolute;top:0;left:0;right:0;height:22px;line-height:22px;padding-left:10px;border-bottom:1px solid var(--line);color:var(--muted);font-size:11px;letter-spacing:.05em;white-space:nowrap;overflow:hidden}
+.mascot-box .mascot{width:76px}
+.bubble{flex:1;color:var(--fg);font-size:13px}
+.bubble::before{content:"> ";color:var(--accent);font-weight:700}
+.bubble-text{display:inline}
+.bubble.typing .bubble-text::after{content:"\258C"}
+.balance{border:1px solid var(--line)}
+.balance .lbl{color:var(--muted);opacity:1}
+.balance .lbl::before{content:"$ balance --month  ";color:var(--accent)}
+.balance .big{color:var(--income);font-size:34px}
+.card h2::before{content:"## ";color:var(--accent)}
+.card h2{justify-content:flex-start}
+.card h2>*:last-child{margin-left:auto}
+.tile .lbl{text-transform:lowercase}
+.bar{height:8px;border-radius:2px}
+.bar i{border-radius:2px;background-image:repeating-linear-gradient(90deg,transparent 0 6px,rgba(0,0,0,.35) 6px 8px)}
+.bar,.bar i{border-radius:2px}
+.donut-track{stroke-width:3.2}
+.chip{border-radius:4px}
+.row .ico{border-radius:3px;color:#171513}
+.seg button{border-radius:3px}
+.fab{border-radius:4px;letter-spacing:.05em}
+.fab::before{content:"> ";opacity:.6}
+.sheet{border:1px solid var(--line)}

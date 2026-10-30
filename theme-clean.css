@@ -1,0 +1,32 @@
+/* 风格 A：清爽简约。小怪站在结余卡片上方，气泡在它左边 */
+:root{
+  --font:-apple-system,"PingFang SC","Microsoft YaHei UI","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --font-num:ui-rounded,"SF Pro Rounded","Segoe UI","Microsoft YaHei UI",sans-serif;
+  --bg:#f3f6f5;--surface:#ffffff;--field:#f3f6f5;--fg:#17211f;--muted:#6a7873;--line:#e2e9e6;--track:#e6edea;
+  --accent:#0f766e;--accent-fg:#ffffff;
+  --hero-bg:#0f766e;--hero-fg:#ffffff;
+  --income:#2a9d5c;--expense:#d6453a;--warn:#a86400;--warn-bg:#fff4dc;
+  --c0:#0f766e;--c1:#e0903a;--c2:#4a6fd8;--c3:#8a5bd0;--c4:#d6453a;--c5:#2a9d5c;--c6:#c2578f;--c7:#7b8a86;
+  --radius:18px;--radius-sm:10px;
+  --shadow:0 10px 30px rgba(15,60,55,.16);--shadow-sm:0 1px 2px rgba(15,60,55,.05);--shadow-fab:0 8px 22px rgba(15,118,110,.4);
+  --clawd:#d97757;--clawd-eye:#1b1210;--clawd-spark:#e8a317;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0e1514;--surface:#172220;--field:#0e1514;--fg:#e8f0ee;--muted:#8fa09b;--line:#263532;--track:#22302d;
+    --accent:#3fc1b3;--accent-fg:#08201d;--hero-bg:#145a54;--hero-fg:#f2fffd;
+    --income:#58d28a;--expense:#ff7b6e;--warn:#f0b455;--warn-bg:#2e2410;
+    --c0:#3fc1b3;--c1:#f0a95a;--c2:#7b9cf2;--c3:#b48cf0;--c4:#ff7b6e;--c5:#58d28a;--c6:#e58abf;--c7:#8fa09b;
+    --shadow:0 10px 30px rgba(0,0,0,.45);--shadow-sm:none;--shadow-fab:0 8px 22px rgba(0,0,0,.5);
+    color-scheme:dark;
+  }
+}
+
+.mascot-box{justify-content:flex-end;margin-bottom:-12px;padding:0 6px;position:relative;z-index:1}
+.mascot-box .mascot{margin-bottom:-2px}
+.bubble{background:var(--surface);border:1px solid var(--line);border-radius:14px 14px 4px 14px;padding:9px 13px;font-size:14px;max-width:calc(100% - 100px);margin-bottom:26px;box-shadow:var(--shadow-sm);position:relative}
+.bubble::after{content:"";position:absolute;right:-6px;bottom:8px;width:10px;height:10px;background:var(--surface);border-right:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
+.balance{padding-top:26px}
+.balance .big{letter-spacing:-.5px}
+.fab{letter-spacing:.5px}

@@ -1,0 +1,37 @@
+/* 风格 B：温暖手账。粉纸、梅子色墨水、便签贴纸里的小怪 */
+:root{
+  --font:"YouYuan","Hiragino Maru Gothic ProN","Arial Rounded MT Bold","PingFang SC","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
+  --font-num:"Arial Rounded MT Bold","Trebuchet MS","Microsoft YaHei UI",sans-serif;
+  --bg:#fbe9e4;--surface:#fffaf8;--field:#fff3ef;--fg:#3b2338;--muted:#8a6d83;--line:#efcfc6;--track:#f3dad3;
+  --accent:#8a3d7a;--accent-fg:#fff7fb;
+  --hero-bg:#8a3d7a;--hero-fg:#fff2f8;
+  --income:#2e8f6b;--expense:#d2433d;--warn:#9b5a00;--warn-bg:#fff0cf;
+  --c0:#8a3d7a;--c1:#f08a4b;--c2:#3a9d8f;--c3:#e2619a;--c4:#5b7bd5;--c5:#e0b13a;--c6:#7aa650;--c7:#a58a9d;
+  --radius:24px;--radius-sm:14px;
+  --shadow:0 6px 0 rgba(138,61,122,.18);--shadow-sm:0 2px 0 rgba(138,61,122,.1);--shadow-fab:0 5px 0 #5f2553;
+  --clawd:#d97757;--clawd-eye:#2a1a22;--clawd-spark:#f2b01e;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#241822;--surface:#33232f;--field:#2a1c27;--fg:#fbe9f3;--muted:#c3a3b8;--line:#4a3345;--track:#42303d;
+    --accent:#e08ac8;--accent-fg:#2a1226;--hero-bg:#6a2c5d;--hero-fg:#fff2f8;
+    --income:#6fd8a8;--expense:#ff8a82;--warn:#f2c26a;--warn-bg:#3a2c12;
+    --c0:#e08ac8;--c1:#f5a06b;--c2:#62c9b9;--c3:#ff86b6;--c4:#8ea8f2;--c5:#efc85a;--c6:#9bc874;--c7:#bfa3b6;
+    --shadow:0 6px 0 rgba(0,0,0,.3);--shadow-sm:none;--shadow-fab:0 5px 0 #8f4c80;
+    color-scheme:dark;
+  }
+}
+
+body{background-image:radial-gradient(var(--line) 1.2px,transparent 1.2px);background-size:18px 18px}
+.mascot-box{align-items:center;background:var(--surface);border:2px dashed var(--accent);border-radius:var(--radius);padding:10px 14px 10px 10px;transform:rotate(-1.2deg);box-shadow:var(--shadow-sm);position:relative}
+.mascot-box::before{content:"";position:absolute;top:-9px;left:50%;width:64px;height:16px;margin-left:-32px;background:rgba(240,138,75,.55);transform:rotate(2deg);border-radius:3px}
+.bubble{font-size:14px;flex:1;color:var(--fg)}
+.bubble::before{content:"今日便签";display:block;font-size:11px;color:var(--accent);letter-spacing:.15em;margin-bottom:1px}
+.card,.tile,.balance{border-width:2px}
+.tile{border-radius:20px}
+.card h2{font-size:16px}
+.row .ico{border-radius:50%}
+.chip{border-width:2px}
+.fab{border:2px solid #5f2553}
+body.lock{overflow:hidden}
